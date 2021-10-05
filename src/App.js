@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import UserInput from './components/UserInput/UserInput';
+import Loading from './components/Loading/Loading';
+import Error from './components/Error/Error';
+import WeatherGroup from "./components/WeatherGroup/WeatherGroup";
+import { useWeatherData } from './hooks/useWeatherData';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    const { data, loading, error } = useWeatherData("London", "GB", { units: "metric"});
+
+    return (
+        <div className="container">
+            <UserInput />
+            {loading && !error && <Loading loading={loading} />}
+            {error && <Error error={error} />}   
+            {!error && !loading && <WeatherGroup data={data} />}       
+        </div>
+    )
 }
 
 export default App;

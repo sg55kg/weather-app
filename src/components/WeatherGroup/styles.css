@@ -1,0 +1,9 @@
+.weather-group {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    border-radius: .5em;
+    width: 51em;
+    background-color: rgba(197, 194, 194, 0.61);
+    justify-content: center;
+}

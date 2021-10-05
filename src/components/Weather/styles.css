@@ -1,0 +1,59 @@
+.weather-card {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.weather-card:hover, .today:hover {
+    background-color: rgba(226, 223, 223, 0.685);
+}
+
+.today {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* border-right: 2px solid rgb(85, 84, 84); */
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.temp > h4 {
+    Font: 1.5em 'Roboto-mono', monospace;
+    font-weight: 600;
+}
+
+.minor-temps > p {
+    Font: 1em 'Roboto-mono', monospace;
+    font-weight: 500;
+}
+
+.minor-temps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+img {
+    height: 5em;
+    align-self: center;
+}
+
+.day {
+    align-self: center;
+    font: 2em 'Roboto-mono', monospace;
+    padding-right: .2em;
+    padding-left: .2em;
+    padding-top: .1em;
+    padding-bottom: .1em;
+}
+
+.today .day {
+    /* background-color: rgba(104, 102, 102, 0.548); */
+    border-bottom: 3px solid black;
+}

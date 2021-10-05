@@ -1,0 +1,25 @@
+.user-input-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.user-input-div > input {
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid orange;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+.user-input-div > input:focus {
+    outline: none;
+}
+
+.user-input-div > input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    background: transparent;
+}
