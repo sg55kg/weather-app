@@ -5,7 +5,28 @@
     margin-top: 3em;
 }
 
-.user-input-div > input {
+form {
+    display: flex;
+    flex-direction: row;
+    font: 1em 'Roboto-mono', monospace;
+    font-weight: 500;
+}
+
+button {
+    background-color: orange;
+    border: none;
+    color: white;
+    border-radius: .5em;
+    padding: 1em;
+    font: 1em 'Roboto-mono', monospace;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: rgb(228, 149, 3);
+}
+
+.user-input-div > form > input {
     background-color: inherit;
     border: none;
     border-bottom: 2px solid orange;
@@ -13,13 +34,6 @@
     margin-left: 2em;
 }
 
-.user-input-div > input:focus {
+.user-input-div > form > input:focus {
     outline: none;
-}
-
-.user-input-div > input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-    background: transparent;
 }

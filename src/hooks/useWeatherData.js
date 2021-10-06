@@ -7,17 +7,6 @@ const createApiUrl = (city, country, { units = 'standard'}) => {
 
 const isDesiredIndex = (_,i) => i % 8 === 0;
 
- //@param {String} city 
-// @param {Object} options
-// @property {string} [options.units='standard']
-
-// @returns {Object} 
-// @property {string|null} error 
-
-// @property {Boolean} loading 
-
-// @property {Object[]} data
-
 const useWeatherData = (city, country, options) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -45,11 +34,9 @@ const useWeatherData = (city, country, options) => {
                     const date = new Date(dt_txt).toLocaleDateString('en-US', {
                         weekday: 'short'
                     });
-                    console.log(icon);
-                    console.log(current)
-                    console.log(min)
-                    return {icon, current, min, max, date}
+                    return {icon, current, min, max, date};
                 });
+                console.log(data);
                 console.log(dataArr)
 
                 setData(dataArr);

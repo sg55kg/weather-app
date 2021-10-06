@@ -1,17 +1,27 @@
 import './styles.css';
 
-const UserInput = () => {
+const UserInput = ({ city, setCity, country, setCountry }) => {
 
-    const setUserInput = (city, country) => {
-        return null;
+
+    //useWeatherData(`${city}`, `${country}`, { units: "imperial"});
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setCity(e.target.elements.city.value);
+        setCountry(e.target.elements.city.value);
     }
 
     return (
         <div className="user-input-div">
-            <p>City</p>
-            <input type="text" name="city" placeholder="Enter city" />
-            <p>Country</p>
-            <input type="text" name="country" placeholder="Enter country" />
+        
+            <form onSubmit={handleSubmit}>
+                <p>City</p>
+                <input type="text" name="city" placeholder="Enter city" autoComplete="off"  />
+                <p>Country</p>
+                <input type="text" name="country" placeholder="Enter country" autoComplete="off" />
+                <button type="submit">Enter</button>
+            </form>
+
         </div>
     )
 }
